@@ -7,7 +7,6 @@ public class Produto {
     private double preco;
     private int estoque;
 
-     
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
     public String getNome() { return nome; }
@@ -20,5 +19,7 @@ public class Produto {
     public void setEstoque(int estoque) { this.estoque = estoque; }
     
     @Override
-    public String toString() { return nome + " - R$ " + preco; }
+    public String toString() { 
+        return nome + " - R$ " + String.format("%.2f", preco) + " (Qtd: " + estoque + ")"; 
+    }
 }
